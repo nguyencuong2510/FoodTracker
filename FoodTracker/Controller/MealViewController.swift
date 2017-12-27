@@ -17,7 +17,6 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     
     var meal: Meal?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,7 +75,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     //MARK: Action
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-        let isPresentingInAddMealModel = presentationController is UINavigationController
+        let isPresentingInAddMealModel = presentingViewController is UINavigationController
         if isPresentingInAddMealModel {
             dismiss(animated: true, completion: nil)
         }else if let owingNavigationController = navigationController{
@@ -102,7 +101,6 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     private func updateSaveButotnState(){
         let text = textField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
-        
     }
     
 
