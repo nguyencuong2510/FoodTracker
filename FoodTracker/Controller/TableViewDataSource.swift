@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewDataSource: NSObject,UITableViewDataSource {
     
@@ -31,6 +32,5 @@ class TableViewDataSource: NSObject,UITableViewDataSource {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
-    
     
 }

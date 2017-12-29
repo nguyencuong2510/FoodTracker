@@ -12,6 +12,8 @@ import os.log
 
 class ServiceData {
     static let share = ServiceData()
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first
+    static let ArchiveURL = DocumentsDirectory?.appendingPathComponent("meals")
     
     var meals = [Meal]()
     
@@ -35,7 +37,7 @@ class ServiceData {
     }
     
     func saveMeals(){
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: (Meal.ArchiveURL?.path)!)
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: (ServiceData.ArchiveURL?.path)!)
         if isSuccessfulSave {
             os_log("Meals successfully saved.", log: OSLog.default, type: .debug)
         } else {
@@ -44,7 +46,7 @@ class ServiceData {
     }
     
     func loadMeal()-> [Meal]?{
-        return NSKeyedUnarchiver.unarchiveObject(withFile: (Meal.ArchiveURL?.path)!) as? [Meal]
+        return NSKeyedUnarchiver.unarchiveObject(withFile: (ServiceData.ArchiveURL?.path)!) as? [Meal]
     }
 
 }

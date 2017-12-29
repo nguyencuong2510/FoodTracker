@@ -6,16 +6,14 @@
 //  Copyright © 2017 nguyencuong. All rights reserved.
 //
 
+import CoreData
 import UIKit
 import os.log
-import CoreData
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, NSFetchedResultsControllerDelegate{
     
     @IBOutlet weak var tableViewController: UITableView!
     var tableViewDataSource: TableViewDataSource = TableViewDataSource()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +39,6 @@ class ViewController: UIViewController{
     
     @IBAction func unwindToMealViewController(sender: UIStoryboardSegue){
         if let sourceViewController = sender.source as? MealViewController,let meal = sourceViewController.meal {
-            
             if let selectedIndexPath = tableViewController.indexPathForSelectedRow{
                 ServiceData.share.meals[selectedIndexPath.row] = meal
                 tableViewController.reloadRows(at: [selectedIndexPath], with: .none)
@@ -75,4 +72,5 @@ class ViewController: UIViewController{
             fatalError("Unexpected Segue Identifier: \(segue.identifier ?? "")")
         }
     }
+    
 }

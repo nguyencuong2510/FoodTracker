@@ -12,7 +12,6 @@
 		5C47B6F01FF0B1990044CB83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C47B6EF1FF0B1990044CB83 /* AppDelegate.swift */; };
 		5C47B6F21FF0B1990044CB83 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C47B6F11FF0B1990044CB83 /* MealViewController.swift */; };
 		5C47B6F51FF0B1990044CB83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C47B6F31FF0B1990044CB83 /* Main.storyboard */; };
-		5C47B6F81FF0B1990044CB83 /* FoodTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C47B6F61FF0B1990044CB83 /* FoodTracker.xcdatamodeld */; };
 		5C47B6FA1FF0B1990044CB83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C47B6F91FF0B1990044CB83 /* Assets.xcassets */; };
 		5C47B6FD1FF0B1990044CB83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C47B6FB1FF0B1990044CB83 /* LaunchScreen.storyboard */; };
 		5C47B7081FF0B1990044CB83 /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C47B7071FF0B1990044CB83 /* FoodTrackerTests.swift */; };
@@ -39,7 +38,6 @@
 		5C47B6EF1FF0B1990044CB83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C47B6F11FF0B1990044CB83 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		5C47B6F41FF0B1990044CB83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5C47B6F71FF0B1990044CB83 /* FoodTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodTracker.xcdatamodel; sourceTree = "<group>"; };
 		5C47B6F91FF0B1990044CB83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C47B6FC1FF0B1990044CB83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C47B6FE1FF0B1990044CB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,11 +92,10 @@
 				5C47B6EF1FF0B1990044CB83 /* AppDelegate.swift */,
 				5CBDA5B81FF0E384009E39DB /* model */,
 				5CBDA5B71FF0E378009E39DB /* Controller */,
-				5C47B6F31FF0B1990044CB83 /* Main.storyboard */,
+				5C683BA51FF6428800878339 /* View */,
 				5C47B6F91FF0B1990044CB83 /* Assets.xcassets */,
 				5C47B6FB1FF0B1990044CB83 /* LaunchScreen.storyboard */,
 				5C47B6FE1FF0B1990044CB83 /* Info.plist */,
-				5C47B6F61FF0B1990044CB83 /* FoodTracker.xcdatamodeld */,
 			);
 			path = FoodTracker;
 			sourceTree = "<group>";
@@ -112,12 +109,20 @@
 			path = FoodTrackerTests;
 			sourceTree = "<group>";
 		};
+		5C683BA51FF6428800878339 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C4379F61FF0C27E001D3E4D /* RatingControl.swift */,
+				5C47B6F31FF0B1990044CB83 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5CBDA5B71FF0E378009E39DB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				5CA422D31FF342CD001EE6CE /* ViewController.swift */,
 				5C47B6F11FF0B1990044CB83 /* MealViewController.swift */,
-				5C4379F61FF0C27E001D3E4D /* RatingControl.swift */,
 				5CBDA5B31FF0D402009E39DB /* MealTableViewCell.swift */,
 				5CA422D11FF341B5001EE6CE /* TableViewDataSource.swift */,
 			);
@@ -242,7 +247,6 @@
 				5CBDA5B41FF0D402009E39DB /* MealTableViewCell.swift in Sources */,
 				5C47B6F21FF0B1990044CB83 /* MealViewController.swift in Sources */,
 				5C47B6F01FF0B1990044CB83 /* AppDelegate.swift in Sources */,
-				5C47B6F81FF0B1990044CB83 /* FoodTracker.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +275,7 @@
 				5C47B6F41FF0B1990044CB83 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		5C47B6FB1FF0B1990044CB83 /* LaunchScreen.storyboard */ = {
@@ -478,19 +483,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		5C47B6F61FF0B1990044CB83 /* FoodTracker.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5C47B6F71FF0B1990044CB83 /* FoodTracker.xcdatamodel */,
-			);
-			currentVersion = 5C47B6F71FF0B1990044CB83 /* FoodTracker.xcdatamodel */;
-			path = FoodTracker.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 5C47B6E41FF0B1990044CB83 /* Project object */;
 }
