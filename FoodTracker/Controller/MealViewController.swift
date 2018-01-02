@@ -23,8 +23,9 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
             textField.text = meal.name
             photoImageView.image = meal.photo
             ratingControl.rating = meal.rating
+        }else{
+            self.title = "New Meals"
         }
-        
         textField.delegate = self
         updateSaveButotnState()
     }

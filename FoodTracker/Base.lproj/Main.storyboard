@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--New Meals-->
+        <!--Meal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,7 +57,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Meals" id="5jw-gU-xqK">
+                    <navigationItem key="navigationItem" id="5jw-gU-xqK">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="BsP-FY-7Tj">
                             <connections>
                                 <action selector="cancel:" destination="BYZ-38-t0r" id="koK-FD-1yi"/>
@@ -192,6 +192,6 @@
         <image name="DefaultPhoto" width="540" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GyO-Fj-Kp8"/>
+        <segue reference="1Xz-nX-N3M"/>
     </inferredMetricsTieBreakers>
 </document>
