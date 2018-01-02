@@ -14,10 +14,13 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate{
     
     @IBOutlet weak var tableViewController: UITableView!
     var tableViewDataSource: TableViewDataSource = TableViewDataSource()
+    var tableViewDelegate: TableViewDelegate = TableViewDelegate()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewController.dataSource = tableViewDataSource
+        tableViewController.delegate = tableViewDelegate
         
         if let savess = ServiceData.share.loadMeal(){
             ServiceData.share.meals += savess
@@ -38,7 +41,7 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate{
     }
     
     @IBAction func unwindToMealViewController(sender: UIStoryboardSegue){
-        if let sourceViewController = sender.source as? MealViewController,let meal = sourceViewController.meal {
+        if let meal = ServiceData.share.meal {
             if let selectedIndexPath = tableViewController.indexPathForSelectedRow{
                 ServiceData.share.meals[selectedIndexPath.row] = meal
                 tableViewController.reloadRows(at: [selectedIndexPath], with: .none)
@@ -58,16 +61,10 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier ?? "" {
         case "AddMeal":
+            ServiceData.share.meal = nil
             os_log("Adding a new meal.", log: OSLog.default, type: .debug)
         case "ShowDetail":
-            guard let mealDetailViewController = segue.destination as? MealViewController,
-                let selectedMealCell = sender as? MealTableViewCell
-                else { return }
-            if let indexPath = tableViewController.indexPath(for: selectedMealCell) {
-                let selectedMeal = ServiceData.share.meals[indexPath.row]
-                mealDetailViewController.meal =  selectedMeal
-            }
-            
+            os_log("ShowDetail a meal.", log: OSLog.default, type: .debug)
         default:
             fatalError("Unexpected Segue Identifier: \(segue.identifier ?? "")")
         }

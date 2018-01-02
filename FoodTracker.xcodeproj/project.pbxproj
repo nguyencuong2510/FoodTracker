@@ -19,6 +19,7 @@
 		5CA422D41FF342CD001EE6CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA422D31FF342CD001EE6CE /* ViewController.swift */; };
 		5CBDA5B21FF0CF73009E39DB /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBDA5B11FF0CF73009E39DB /* Meal.swift */; };
 		5CBDA5B41FF0D402009E39DB /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBDA5B31FF0D402009E39DB /* MealTableViewCell.swift */; };
+		5E55320D1FFB66C0006D5571 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E55320C1FFB66C0006D5571 /* TableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		5CA422D31FF342CD001EE6CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5CBDA5B11FF0CF73009E39DB /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		5CBDA5B31FF0D402009E39DB /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		5E55320C1FFB66C0006D5571 /* TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				5C47B6F11FF0B1990044CB83 /* MealViewController.swift */,
 				5CBDA5B31FF0D402009E39DB /* MealTableViewCell.swift */,
 				5CA422D11FF341B5001EE6CE /* TableViewDataSource.swift */,
+				5E55320C1FFB66C0006D5571 /* TableViewDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				5CA422D41FF342CD001EE6CE /* ViewController.swift in Sources */,
 				5CBDA5B41FF0D402009E39DB /* MealTableViewCell.swift in Sources */,
 				5C47B6F21FF0B1990044CB83 /* MealViewController.swift in Sources */,
+				5E55320D1FFB66C0006D5571 /* TableViewDelegate.swift in Sources */,
 				5C47B6F01FF0B1990044CB83 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

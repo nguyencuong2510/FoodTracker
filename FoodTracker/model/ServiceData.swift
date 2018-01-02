@@ -14,7 +14,12 @@ class ServiceData {
     static let share = ServiceData()
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first
     static let ArchiveURL = DocumentsDirectory?.appendingPathComponent("meals")
+    //MARK: VC
+    var meal: Meal?
     
+    
+    
+    //MARK: tableVC
     var meals = [Meal]()
     
     func loadSampleMeals(){

@@ -15,12 +15,11 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     @IBOutlet weak var ratingControl: RatingControl!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    var meal: Meal?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let meal = meal {
+        if let meal = ServiceData.share.meal {
             textField.text = meal.name
             photoImageView.image = meal.photo
             ratingControl.rating = meal.rating
@@ -29,8 +28,6 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         textField.delegate = self
         updateSaveButotnState()
     }
-    
-    
     
     //MARK: UITextFieldDelegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -69,7 +66,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         let name = textField.text ?? ""
         let photo = photoImageView.image
         let rating = ratingControl.rating
-        meal = Meal(name: name, photo: photo, rating: rating)
+        ServiceData.share.meal = Meal(name: name, photo: photo, rating: rating)
     }
     
     //MARK: Action
@@ -86,14 +83,10 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         
     }
     
-    
     @IBAction func selectImagePhotoLibrary(_ sender: UITapGestureRecognizer) {
-        
         textField.resignFirstResponder()
         let imagePickerController = UIImagePickerController()
-        
         imagePickerController.sourceType = .photoLibrary
-        
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
     }
