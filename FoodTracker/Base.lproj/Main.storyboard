@@ -23,13 +23,16 @@
                                 <rect key="frame" x="20" y="84" width="728" height="796"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJZ-z9-89V">
-                                        <rect key="frame" x="0.0" y="0.0" width="728" height="196"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="728" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="atf-dM-8lx"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="mgb-xT-edV">
-                                        <rect key="frame" x="94" y="204" width="540" height="540"/>
+                                        <rect key="frame" x="26" y="68" width="676" height="676"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="mgb-xT-edV" secondAttribute="height" multiplier="1:1" id="NrV-2D-VWc"/>
@@ -43,6 +46,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="eJZ-z9-89V" firstAttribute="top" secondItem="WT6-J4-a53" secondAttribute="top" id="HRk-rb-zRE"/>
                                     <constraint firstAttribute="trailing" secondItem="eJZ-z9-89V" secondAttribute="trailing" id="vH5-bX-8oa"/>
                                     <constraint firstItem="eJZ-z9-89V" firstAttribute="leading" secondItem="WT6-J4-a53" secondAttribute="leading" id="yz7-5f-Ry8"/>
                                 </constraints>
